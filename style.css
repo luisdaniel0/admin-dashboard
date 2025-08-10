@@ -1,5 +1,125 @@
-.container{
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Sidebar fixed, rest flexible */
+    grid-template-rows: auto 1fr;     /* Header auto height, main fills */
+    height: 100vh;
+}
+
+.sidebar {
+    grid-row: 1 / span 2; /* spans both rows */
+}
+
+.header {
+    grid-column: 2; /* goes in second column */
+}
+
+.main-content {
+    grid-column: 2; /* also in second column */
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Projects bigger than right panel */
+    gap: 20px;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:15px;
+}
+
+/* .right-panel{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+} */
+.card {
+    background: #b80d0d2a;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.announcements{
+    display: grid;
+    gap:10px;
+}
+
+.right-card{
+    background: #0ca53f2a;
+    
+    
+}
+
+.media-handles{
+    background: #bd07f52a;
+    padding:15px;
+    list-style: none;
+    display: grid;
+    gap:10px;
+    
+}
+
+.media-handles li {
+    padding:10px;
+    background: #fff2;
+    border-radius: 6px;
+}
+
+.trending{
+    display: grid;
+    gap:10px;
+    grid-template-rows: auto 1fr;
+}
+
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.announcements-section,
+.trending-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcements {
+    display: grid;
+    gap: 10px;
+}
+
+.media-handles {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.announcements-section h3,
+.trending-section h3,
+.projects-section h3 {
+     margin: 0 0 10px 0; /* remove top margin, small gap below */
+    font-size: 1rem;    /* smaller heading size */
+    line-height: 1.2;   /* tighter text spacing */
+}
+
+.searchbar{
+    display:flex;
+    gap:10px;
+    flex-direction: row-reverse;
+   justify-content: flex-end;
+}
+
+.searchbar input{
+    width:25vw;
+}
+
+h4{
+    margin-bottom: 0;
+   
+}
+
+h3{
+    margin-top:0;
 }
