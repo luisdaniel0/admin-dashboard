@@ -4,83 +4,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Admin Dashboard</title>
 </head>
 <body>
-    <div class="container">
-
-        <!-- SIDEBAR -->
-        <div class="sidebar">
-            <h2>Dashboard</h2>
-            <ul>
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Message</li>
-                <li>History</li>
-                <li>Tasks</li>
-                <li>Communities</li>
-                <li>Settings</li>
-                <li>Support</li>
-                <li>Privacy</li>
-            </ul>
+    <div class="grid-container">
+        <div class="dashboard">
+            <div class="dashboard-title menuItem">
+                <img src="./icons/view-dashboard-outline.svg" alt="dashboard-icon">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="menuItem">
+                <img src="./icons/home.svg" alt="home-icon">
+                <h1>Home</h1>
+            </div>
+            <div class="menuItem">
+                <img src="./icons/card-account-details-outline.svg" alt="profile-icon">
+                <h1>Profile</h1>
+            </div>
+            <div class="menuItem">
+                <img src="./icons/message-outline.svg" alt="messages-icon">
+                <h1>Messages</h1>
+            </div>
+            <div class="menuItem">
+                <img src="./icons/clock.svg" alt="history-icon">
+                <h1>History</h1>
+            </div>
+            <div class="menuItem">
+                <img src="./icons/note-edit-outline.svg" alt="task-icon">
+                <h1>Tasks</h1>
+            </div>
+            <div class="menuItem">
+                <img src="./icons/account-group-outline.svg" alt="communities-icon">
+                <h1>Communities</h1>
+            </div>
+            <!-- SPACE THESE NEXT 3 AWAY FROM THE REST  -->
+            <div class="bottom-dashboard-items">
+                <div class="menuItem">
+                    <img src="./icons/cog-outline.svg" alt="settings-icon">
+                    <h1>Settings</h1>
+                </div>
+                <div class="menuItem">
+                    <img src="./icons/help-circle-outline.svg" alt="support-icon">
+                    <h1>Support</h1>
+                </div>
+                <div class="menuItem">
+                    <img src="/icons/lock-check-outline.svg" alt="privacy-icon">
+                    <h1>Privacy</h1>
+                </div>
+            </div>
+        
+        
         </div>
-
-        <!-- HEADER -->
         <div class="header">
-            <div class="searchbar">
-                <input type="text">
-                <button type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
+            <div class="header-top">
+                <div class="search">
+                    <div class="menuItem">
+                        <img src="./icons/magnify.svg" alt="search-icon">
+                    </div>
+                    <input type="text" name="search">
+                </div>
+                <div class="user-name">
+                    <img src="./icons/bell-outline.svg" alt="notification-icon">
+                    <img src="./icons/face-man-profile.svg" alt="avatar-icon">
+                    <p class="name">Luis Sanchez</p>
+                </div>
             </div>
-            <h4>Hi there,</h4>
-            <h3>Luis Sanchez (@flackonft)</h3>
-            <button>New</button>
-            <button>Upload</button>
-            <button>Share</button>
-        </div>
-
-        <!-- MAIN CONTENT -->
-<div class="main-content">
-
-    <!-- LEFT: PROJECTS -->
-    <section class="projects-section">
-        <h3>Your Projects</h3>
-        <div class="projects">
-            <div class="card">Super Cool Project</div>
-            <div class="card">Less Cool Project</div>
-            <div class="card">Impossible App</div>
-            <div class="card">Easy Peasy App</div>
-            <div class="card">Ad Blocker</div>
-            <div class="card">Money Maker</div>
-        </div>
-    </section>
-
-    <!-- RIGHT: ANNOUNCEMENTS + TRENDING -->
-    <div class="right-panel">
-
-        <section class="announcements-section">
-            <h3>Announcements</h3>
-            <div class="announcements">
-                <div class="right-card">Site Maintenance</div>
-                <div class="right-card">Community Share Day</div>
-                <div class="right-card">Updated Privacy Policy</div>
+            <div class="header-bottom">
+                <div class="profile">
+                    <img src="./icons/face-man-profile.svg" alt="avatar-icon">
+                    <p class="greeting">Hi there,<br> <br>Luis Sanchez(@flacko_nft)</p>
+                    
+        
+                </div>
+                <div class="profile-buttons">
+                    <button class="btn">New</button>
+                    <button class="btn">Upload</button>
+                    <button class="btn">Share</button>
+                </div>
             </div>
-        </section>
-
-        <section class="trending-section">
-            <h3>Trending</h3>
-            <ul class="media-handles">
-                <li>@tegan</li>
-                <li>@morgan</li>
-                <li>@kendall</li>
-                <li>@alex</li>
-            </ul>
-        </section>
-
+        </div>
+        <div class="main">
+            <div class="projects">
+                <h3 class="your-projects">Your Projects</h3>
+                <div class="cards">
+                    <div class="card">
+                        <h5 class="card-title">Super Cool Project</h5>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="card-icons">
+                            <img src="/icons/star-check-outline.svg" alt="favorite">
+                            <img src="/icons/eye-check-outline.svg" alt="open">
+                            <img src="/icons/share-variant-outline.svg" alt="share">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h5 class="card-title">Less Cool Project</h5>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="card-icons">
+                            <img src="/icons/star-check-outline.svg" alt="favorite">
+                            <img src="/icons/eye-check-outline.svg" alt="open">
+                            <img src="/icons/share-variant-outline.svg" alt="share">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h5 class="card-title">Impossible App</h5>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="card-icons">
+                            <img src="/icons/star-check-outline.svg" alt="favorite">
+                            <img src="/icons/eye-check-outline.svg" alt="open">
+                            <img src="/icons/share-variant-outline.svg" alt="share">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h5 class="card-title">Easy Peasy App</h5>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="card-icons">
+                            <img src="/icons/star-check-outline.svg" alt="favorite">
+                            <img src="/icons/eye-check-outline.svg" alt="open">
+                            <img src="/icons/share-variant-outline.svg" alt="share">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h5 class="card-title">Ad Blocker</h5>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="card-icons">
+                            <img src="/icons/star-check-outline.svg" alt="favorite">
+                            <img src="/icons/eye-check-outline.svg" alt="open">
+                            <img src="/icons/share-variant-outline.svg" alt="share">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h5 class="card-title">Money Maker</h5>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="card-icons">
+                            <img src="/icons/star-check-outline.svg" alt="favorite">
+                            <img src="/icons/eye-check-outline.svg" alt="open">
+                            <img src="/icons/share-variant-outline.svg" alt="share">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side-cards">
+                <div class="announcements">
+                    <h3>Announcements</h3>
+                    <ul class="card">
+                        <li class="announcement-card">
+                            <h5 class="card-title">Site Maintenance</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                 text ever since the 1500s.
+                                </p>
+                        </li>
+                        <li class="announcement-card">
+                            <h5 class="card-title">Community Share Day</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                 text ever since the 1500s.
+                                </p>
+                        </li>
+                        <li class="announcement-card">
+                            <h5 class="card-title">Updated Privacy Policy</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                 text ever since the 1500s.
+                                </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="trending">
+                    <h3>Trending</h3>
+                    <ul class="card">
+                        <li class="trend trend-1">
+                            <img src="./icons/account-cowboy-hat-outline.svg" alt="avatar">
+                            <div class="account">
+                                <div class="username">@tegan</div>
+                                <p class="name card-text">World Peace Builder</p>
+                            </div>
+                        </li>
+                        <li class="trend trend-2">
+                            <img src="/icons/emoticon-devil-outline.svg" alt="avatar">
+                            <div class="account">
+                                <div class="username">@flacko_nft</div>
+                                <p class="name card-text">Super Cool Project</p>
+                            </div>
+                        </li>
+                        <li class="trend trend-3">
+                            <img src="/icons/emoticon.svg" alt="avatar">
+                            <div class="account">
+                                <div class="username">@kendall</div>
+                                <p class="name card-text">Life Changing App</p>
+                            </div>
+                        </li>
+                        <li class="trend trend-4">
+                            <img src="/icons/emoticon-happy-outline.svg" alt="avatar">
+                            <div class="account">
+                                <div class="username">@alex</div>
+                                <p class="name card-text">No Traffic Maker</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
